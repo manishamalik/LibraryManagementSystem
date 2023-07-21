@@ -5,11 +5,11 @@ import com.library.management.model.Book;
 import java.util.List;
 
 public interface BookService {
-    public Book addBook(Book book);
+    Book addBook(Book book);
 
-    public List<Book> getAllBooks();
+     List<Book> getAllBooks();
 
-    public Book getById(String id);
+    Book getById(String id);
 
-    public void deleteBook(String id);
+    void deleteBook(String id);
 }
