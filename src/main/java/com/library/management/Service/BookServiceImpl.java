@@ -4,6 +4,7 @@ import com.library.management.model.Book;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class BookServiceImpl implements BookService {
@@ -15,7 +16,7 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public Book addBook(Book book) {
-        System.out.println(book.bookId +" has been added");
+        System.out.println(book.id +" has been added");
         return bookRepository.save(book);
     }
     @Override
@@ -23,9 +24,10 @@ public class BookServiceImpl implements BookService {
         return bookRepository.findAll();
     }
     @Override
-    public Book getById(String id){
-        return bookRepository.findById(id).orElse(null);
+    public Optional<Book> getById(String id){
+        return bookRepository.findById(id);
     }
+
     @Override
     public void deleteBook(String id) {
         bookRepository.deleteById(id);
