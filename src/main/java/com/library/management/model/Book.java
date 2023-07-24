@@ -14,7 +14,8 @@ public class Book {
     public String bookName;
     public  String author;
     public String category;
-    public BookIssue bookissue;
+    @Field("bookIssue")
+    public BookIssue bookIssue;
     public boolean isAvailable;
 
 }
