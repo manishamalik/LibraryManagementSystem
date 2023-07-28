@@ -20,8 +20,7 @@ public class AddBookDetails {
 
 
     @PostMapping("/")
-    public String addBook(@RequestBody Book book){
-        bookService.addBook(book);
-        return "BookAdded";
+    public Book addBook(@RequestBody Book book){
+        return bookService.addBook(book);
     }
 }

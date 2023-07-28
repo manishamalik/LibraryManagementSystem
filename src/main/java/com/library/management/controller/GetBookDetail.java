@@ -20,12 +20,12 @@ public class GetBookDetail {
     }
 
     @GetMapping("/{id}")
-    public Optional<Book> GetBookDetailsById (@PathVariable("id") String bookId){
+    public Optional<Book> getBookDetailsById (@PathVariable("id") String bookId){
         return  bookService.getById(bookId);
-        //return ("Book Details corresponding to id "+bookId +" : "  );
+
     }
     @GetMapping()
-    public List<Book> GetAllBook(){
+    public List<Book> getAllBook(){
         return bookService.getAllBooks();
     }
 
